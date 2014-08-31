@@ -1,0 +1,8 @@
+1409394496562	Rename resource 'Item_list_activity_actions.xml'
+1409395990646	Inline local variable 'inflater'
+1409402007100	Rename package 'com.example.pinglist.dummy'
+1409402157558	Rename type 'DummyContent'
+1409402173459	Rename type 'DummyItem'
+1409402193245	Rename field 'ITEM_MAP'
+1409402207214	Rename field 'ITEMS'
+1409426693836	Rename local variable 'mIpAddrProcess'

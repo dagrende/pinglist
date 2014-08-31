@@ -1,0 +1,61 @@
+package com.example.pinglist.model;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Helper class for providing sample content for user interfaces created by
+ * Android template wizards.
+ * <p>
+ */
+public class HostManager {
+
+    /**
+     * An array of sample (dummy) items.
+     */
+    public static List<Host> HOSTS = new ArrayList<Host>();
+
+    /**
+     * A map of sample (dummy) items, by ip.
+     */
+    public static Map<String, Host> HOST_MAP = new HashMap<String, Host>();
+    
+    public enum PingState {
+    	PENDING, OK, ERROR;
+    }
+
+    static {
+        addItem(new Host("217.76.87.118"));
+        addItem(new Host("217.76.87.97"));
+ //       addItem(new Host("217.76.87.103"));
+    }
+
+    private static void addItem(Host item) {
+        HOSTS.add(item);
+        HOST_MAP.put(item.ipNo, item);
+    }
+
+    /**
+     * A dummy item representing a piece of content.
+     */
+    public static class Host {
+        public String ipNo;
+		public PingState pingState;
+
+        public Host(String content, PingState pingState) {
+            this.ipNo = content;
+            this.pingState = pingState;
+        }
+
+        public Host(String content) {
+            this(content,  PingState.PENDING);
+        }
+
+        @Override
+        public String toString() {
+            return ipNo;
+        }
+    }
+}

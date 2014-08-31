@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.example.pinglist.R.menu"/>
+<fullyQualifiedTypeName name="com.example.pinglist.HostListAdapter"/>
+<fullyQualifiedTypeName name="com.example.pinglist.model.HostManager.PingState"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="com.example.pinglist.model.HostManager"/>
+<fullyQualifiedTypeName name="com.example.pinglist.model.HostManager.Host"/>
+</qualifiedTypeNameHistroy>
