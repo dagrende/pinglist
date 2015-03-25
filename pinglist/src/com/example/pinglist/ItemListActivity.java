@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -95,10 +98,10 @@ public class ItemListActivity extends FragmentActivity
     		host.pingState = HostManager.PingState.PENDING;
     	}
 		hostListAdapter.notifyDataSetChanged();
-    	task = new DownloadFilesTask().execute(hosts.toArray(new HostManager.Host[hosts.size()]));
+    	task = new PingTask().execute(hosts.toArray(new HostManager.Host[hosts.size()]));
 	}
     
-    private class DownloadFilesTask extends AsyncTask<HostManager.Host, Integer, Long> {
+    private class PingTask extends AsyncTask<HostManager.Host, Integer, Long> {
         protected Long doInBackground(HostManager.Host... hosts) {
             int count = hosts.length;
             long totalSize = 0;
